@@ -11,7 +11,7 @@ namespace OTUS.regEx
 			var contentProvider = new ContentProvider();
 			var htmlImageSaver = new HtmlImageSaver(htmlRegExImageFinder, contentProvider);
 
-			var destinationDir = Environment.CurrentDirectory + "\\images\\";
+			var destinationDir = Path.Combine(Environment.CurrentDirectory, "images");
 			var webSite = "https://stocksnap.io/";
 			htmlImageSaver.SaveImages(webSite, destinationDir);
 		}
